@@ -1,8 +1,12 @@
 # name: discourse-onebox-bilibili
 # about: 为 Discourse Onebox 增加了 bilibili 视频支持
-# version: 0.0.1
+# version: 0.0.2
 # authors: MuZhou233
 # url: https://github.com/MuZhou233/discourse-onebox-bilibili
+
+require_relative "../../lib/onebox"
+
+Onebox = Onebox
 
 class Onebox::Engine::BilibiliOnebox
   include Onebox::Engine

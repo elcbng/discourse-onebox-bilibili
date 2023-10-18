@@ -1,8 +1,8 @@
-# name: discourse-onebox-bilibili
+# name: discourse-embed-bilibili
 # about: 为 Discourse Onebox 增加了 bilibili 视频支持
-# version: 0.0.2
-# authors: MuZhou233
-# url: https://github.com/MuZhou233/discourse-onebox-bilibili
+# version: 0.0.3
+# authors: whitewatercn
+# url: https://github.com/whitewatercn/discourse-embed-bilibili
 
 require_relative "../../lib/onebox"
 
@@ -11,7 +11,7 @@ Onebox = Onebox
 class Onebox::Engine::BilibiliOnebox
   include Onebox::Engine
 
-  matches_regexp(/^https?:\/\/(?:www\.)?bilibili\.com\/video\/([a-zA-Z0-9]+)\/?$/)
+  matches_regexp(/^https?:\/\/(?:www\.)?bilibili\.com\/video\/([a-zA-Z0-9]+)\/?.*$/)
   always_https
 
   def video_id
